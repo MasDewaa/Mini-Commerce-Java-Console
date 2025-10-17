@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public class TransactionService {
-    private TransactionRepository repo = new TransactionRepository();
+    private final TransactionRepository repo = new TransactionRepository();
 
     public void buy(String buyerName, Product p, int quantity) throws SQLException {
         if (quantity > p.getStock()) {
